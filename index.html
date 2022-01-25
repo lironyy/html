@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tags</title>
+    <style>
+      body {
+        margin-bottom: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        ** Link
+        direct the user to another.
+        
+        display: inline 
+        content: *    
+
+        ATTR:
+        href (hyperlink reference): URL
+        target: 
+            - _self (default)   - open in same tab
+            - _blank            - open in another tab
+     -->
+
+    <a href="https://google.com">Click Me to Redirect</a>
+
+    <br /><br />
+
+    <!-- 
+        ** List
+        ol - for ordered list with numbers
+        ul - unordered list with bullets
+
+        display: block
+        content: li (list item)
+
+    
+     -->
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <ul>
+        <li>Item inner</li>
+        <li>Item inner</li>
+      </ul>
+      <li>Item 3</li>
+      <ol>
+        <li>Item inner</li>
+        <li>Item inner</li>
+      </ol>
+    </ol>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <ul>
+        <li>Item inner</li>
+        <li>Item inner</li>
+      </ul>
+      <li>Item 4</li>
+      <ol>
+        <li>Item inner</li>
+        <li>Item inner</li>
+      </ol>
+    </ul>
+
+    <br /><br />
+
+    <!-- 
+        ** Table
+        make sure that all tr contain the exact same amount of cells
+
+        display: table (like block)
+     -->
+
+    <table>
+      <thead>
+        <!-- the header rows section of the table -->
+        <tr>
+          <!-- table row -->
+          <th>title 1</th>
+          <!-- cell of table head  -->
+          <th>title 2</th>
+          <th>title 3</th>
+          <th>title 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- the data rows section of the table -->
+        <tr>
+          <td>cell 1</td>
+          <!-- cell of table data -->
+          <td>cell 2</td>
+          <td>cell 3</td>
+          <td>cell 4</td>
+        </tr>
+        <tr>
+          <td>cell 1</td>
+          <td>cell 2</td>
+          <td>cell 3</td>
+          <td>cell 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- the summary rows section of the table -->
+        <tr>
+          <td>cell 1</td>
+          <td>cell 2</td>
+          <td>cell 3</td>
+          <td>cell 4</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br /><br />
+
+    <!-- 
+        ** div
+        none-semantic. Group several elements as one mostly for css and order 
+
+        display: block
+     -->
+
+    <div>
+      <p>Lorem.</p>
+      <ul>
+        <li>Lorem.</li>
+      </ul>
+      <div>
+        <span>Lorem.</span>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- 
+         ** span 
+        none-semantic. Groups several elements as one mostly for css and order
+
+        display: inline
+    -->
+    <div class="users">
+      <div class="user">
+        <span class="name">Daniel</span>
+        <span class="age">25</span>
+        <span class="email">d@gmail.com</span>
+      </div>
+      <div class="user">
+        <span class="name">Daniel</span>
+        <span class="age">25</span>
+        <span class="email">d@gmail.com</span>
+      </div>
+      <div class="user">
+        <span class="name">Daniel</span>
+        <span class="age">25</span>
+        <span class="email">d@gmail.com</span>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!--
+        ** h1-6 (header)
+        some content header
+
+        display: block
+    -->
+    <h1>header 1</h1>
+    <h2>header 2</h2>
+    <h3>header 3</h3>
+    <h4>header 4</h4>
+    <h5>header 5</h5>
+    <h6>header 6</h6>
+
+    <br /><br />
+
+    <!-- 
+        ** p (paragraph)
+
+        display: block
+    -->
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <br /><br />
+
+    <!-- 
+        ** form
+        send HTTP request
+
+        display: block
+        content: *, input, textarea, select, label, button
+
+        ATTR: 
+            - action: URL - the location to send the request to
+            - method: 
+                - GET (default)
+                - POST
+     -->
+
+    <!-- <form action="https://google.com/search"> -->
+    <form action="">
+      <!-- 
+            ** label
+            some description for the input
+
+            display: inline
+
+            ATTR: 
+                for: ElementId - some id of another element. To describe the context, and it will make clicking the label as if clicking the input
+         -->
+      <label for="my-checkbox"> The label for the input </label>
+      <input type="checkbox" id="my-checkbox" />
+
+      <!-- 
+        ** input
+
+        display: inline
+
+        ATTR: 
+            - type: sets the type of input and allowed values
+                - text      - some text
+                - checkbox  - yes/no
+                - date      - date picker
+                - number    - only numbers. has some increment decrement buttons
+                - password  - puts * instead of letters
+                - radio     - choose from several options
+                - submit    - a button which sends the form
+                - button    - a button which NOT sends the form
+            - name: a name for the field when it is sent
+            - value: the input's value can be set in html to some default and change by the user
+            - placeholder: some description to be shown as long there is not value in the input
+            - disabled: disable user from changing the value
+       -->
+      <br />
+      <input type="text" name="q" placeholder="something to search" />
+      <br />
+      <input type="checkbox" name="cb" />
+      <br />
+      <input type="date" disabled />
+      <br />
+      <input type="number" value="44" placeholder="age" />
+      <br />
+      <input type="password" />
+      <br />
+      <input type="radio" name="color" value="red" />red
+      <br />
+      <input type="radio" name="color" value="blue" />blue
+      <br />
+      <input type="radio" name="color" value="green" />green <br /><br />
+      <input type="radio" name="food" value="hamburger" />hamburger
+      <br />
+      <input type="radio" name="food" value="hotdog" />hotdog
+      <br />
+      <input type="radio" name="food" value="broccoli" />broccoli
+
+      <br />
+      <!-- submit will send the form on click button will not -->
+      <input type="submit" value="submit button" />
+      <input type="button" value="button button" />
+
+      <!-- if inside form on click submit if not in form a plain button -->
+      <button>submit</button>
+
+      <br /><br />
+      <!-- 
+        ** textarea
+        input for long text
+
+        display: inline-block
+        content: text only
+
+        ATTR: 
+            - name: a name for the field when it is sent
+            - disabled: disable user from changing the value
+            - cols: number of letters for width
+            - rows: number of rows for height
+          
+       -->
+
+      <textarea name="" id="" cols="30" rows="10">
+          Some initial value in the textarea
+
+
+          in textarea      spaces and new lines      are shown
+      </textarea>
+
+      <br /><br />
+
+      <!-- 
+        ** Select
+        let the user select an option of possibilities
+
+        display: inline
+        content: option
+
+        ATTR: 
+            - name: a name for the field when it is sent
+            - value: the input's value can be set in html to some default and change by the user
+            - disabled: disable user from changing the value
+       -->
+
+      <select name="my-select">
+        <option value="the-actual-value-set-for-the-select-when-chosen">
+          SOME TEXT FOR THE USER
+        </option>
+        <option value="red">The color red is beautiful</option>
+        <option value="green">The color green is beautiful</option>
+      </select>
+    </form>
+
+    <form action="https://formspree.io/f/mgedozer" method="POST">
+      <input type="text" placeholder="name" name="name" minlength="5" />
+      <input
+        type="number"
+        placeholder="age"
+        name="age"
+        min="0"
+        max="120"
+        required
+      />
+      <input type="text" placeholder="email" name="email" />
+      <button>submit</button>
+    </form>
+  </body>
+</html>
